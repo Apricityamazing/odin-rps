@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice(numberofchoices) {
  let choice = Math.floor(Math.random() * numberofchoices);
  if (choice == 0) {
@@ -31,6 +28,7 @@ function getHumanChoice() {
         return "bad"
     }
 }
+function playGame(){
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "Scissors!" && computerChoice == "Scissors!") {
         console.log("It's a tie!")
@@ -69,5 +67,8 @@ function playRound(humanChoice, computerChoice) {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-
+let humanScore = 0;
+let computerScore = 0;
 playRound(humanSelection, computerSelection);
+
+}
