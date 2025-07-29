@@ -1,3 +1,7 @@
+
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
 function getComputerChoice(numberofchoices) {
  let choice = Math.floor(Math.random() * numberofchoices);
  if (choice == 0) {
@@ -12,7 +16,7 @@ function getComputerChoice(numberofchoices) {
 }
 
 function getHumanChoice() {
-    const choice = String(prompt("Choose one! Rock, Paper, or Scissors?", "rock"));
+    let choice = String(prompt("Choose one! Rock, Paper, or Scissors?"));
     if (choice.toLowerCase() == "rock") {
         return "Rock!"
     }
@@ -25,10 +29,8 @@ function getHumanChoice() {
     else {
         console.log("Invalid response. Please try again.");
         getHumanChoice();
-        return "bad"
     }
 }
-function playGame(){
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "Scissors!" && computerChoice == "Scissors!") {
         console.log("It's a tie!")
@@ -63,12 +65,27 @@ function playRound(humanChoice, computerChoice) {
         console.log("Scissors loses to Rock. You lose :(");
         computerScore= computerScore + 1;
     }
+}   
+    playRound(getHumanChoice(), getComputerChoice(3));
+    console.log("The current score is:");
+    console.log("You: " + humanScore);
+    console.log("Computer: " + computerScore);
+    playRound(getHumanChoice(), getComputerChoice(3));
+    console.log("The current score is:");
+    console.log("You: " + humanScore);
+    console.log("Computer: " + computerScore);
+    playRound(getHumanChoice(), getComputerChoice(3));
+    console.log("The current score is:");
+    console.log("You: " + humanScore);
+    console.log("Computer: " + computerScore);
+    playRound(getHumanChoice(), getComputerChoice(3));
+    console.log("The current score is:");
+    console.log("You: " + humanScore);
+    console.log("Computer: " + computerScore);
+    playRound(getHumanChoice(), getComputerChoice(3));
+    console.log("The current score is:");
+    console.log("You: " + humanScore);
+    console.log("Computer: " + computerScore);
+    console.log("I hope you had fun!");
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-let humanScore = 0;
-let computerScore = 0;
-playRound(humanSelection, computerSelection);
-
-}
+    playGame();
